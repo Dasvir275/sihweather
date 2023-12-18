@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/sihweather/static/css/main.5d7fe466.css",
+    "main.js": "/sihweather/static/js/main.fe964421.js",
+    "static/js/787.d4aba7ab.chunk.js": "/sihweather/static/js/787.d4aba7ab.chunk.js",
+    "static/media/wallpaper.jpg": "/sihweather/static/media/wallpaper.82b1256d83cd3ef8a0c6.jpg",
+    "service-worker.js": "/sihweather/service-worker.js",
+    "static/media/help.svg": "/sihweather/static/media/help.d8ada0d9999ba56f299e75c15e51402f.svg",
+    "static/media/search.svg": "/sihweather/static/media/search.54d66f7b074f41e2ed1bd6b83b346860.svg",
+    "index.html": "/sihweather/index.html",
+    "static/media/user.svg": "/sihweather/static/media/user.28e3a8fd2dad230806d9b3c6daf8c182.svg",
+    "static/media/lang.svg": "/sihweather/static/media/lang.8f24a393f71e9f19d016aa1933e129fd.svg",
+    "main.5d7fe466.css.map": "/sihweather/static/css/main.5d7fe466.css.map",
+    "main.fe964421.js.map": "/sihweather/static/js/main.fe964421.js.map",
+    "787.d4aba7ab.chunk.js.map": "/sihweather/static/js/787.d4aba7ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d7fe466.css",
+    "static/js/main.fe964421.js"
+  ]
+}
