@@ -1,38 +1,372 @@
-.App {
+.homeWrap{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('./Assets/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.weatherSection{
+  display: flex;
+    border-radius: 25px;
+    box-shadow: 4px 6px 6px 7px rgb(0 0 0 / 10%);
+    color: #fff;
+    margin: 20px;
+    height: max-content;
+    background: rgba(0,0,0,0.1);
+    border: solid 2px #ffff;
+    padding: 0;
+}
+.leftWrap{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    border-radius: 25px;
+    width: 300px;
+    transition: transform .3s ease;
+    transform: translateZ(0) scale(1.02) perspective(1000px);
+    background: #2e3f50;
+    margin-right: 10px;
+    box-shadow: -1px 1px 9px 14px rgb(0 0 0 / 30%);
+}
+.rightSide{
+  color: #000;
+    position: relative;
+    float: left;
+    height: 100%;
+    padding-top: 25px;
+    padding-right: 20px;
+}
+
+
+
+
+.search-bar {
+  width: 70%;
+  height: 20px;
+  flex-shrink: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.stateWrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  border:#d9d9d980 ;
+  background: #d9d9d980;  
+  border-top-left-radius: 17px ;  
+  border-bottom-left-radius: 17px ;  
+  padding: 12px;
+  width: 15px;
+  margin-left: -10px; /* Adjust this margin as needed */
+}
+
+.stateMenu {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  width: calc(100% - -900px); /* Adjust this width as needed */
+  box-sizing: border-box;
+  border: none;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  padding: 10px;
+  background: #d9d9d980;    
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease;
+}
+
+
+.humidityWrap{
+  padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    margin-bottom: 20px;
+}
+.humidityWrap>* {
+  display: flex;
+  justify-content: space-between;
+}
+.humidityData + .humidityData {
+  margin-top: 10px;
+}
+
+.title{
+  font-weight: 700;
+}
+.cardWrap {
+  background: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+.cardList {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.cardList::after, .cardList::before{
+  content: '';
+  overflow: hidden;
+  clear: both;
+  display: table;
+}
+.cardList > li {
+  float: left;
+  padding: 15px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+.day-icon {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin: 0 auto;
+}
+.day-name {
+  display: block;
+  margin: 10px 0 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.day-temp {
+  display: block;
+  text-align: center;
+  margin: 10px 0 0;
+  font-weight: 700;
+}
+.cardList > li.active{
+  background: #fff;
+  border-radius: 10px;
+}
+.cardList > li:hover{
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1.1);
+  box-shadow: 0 0 40px -5px #0003;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.dateDay, .locationName {
+  display: block;
+}
+.locationName{
+  margin-top: 10px;
+}
+.weatherTemp {
+  margin: 0;
+  font-weight: 700;
+  font-size: 4em;
+}
+
+@media only screen and (max-width: 700px) {
+  .weatherSection, .homeWrap, .leftWrap, .rightSide{
+    display: block;
+    height: auto;
+    float: none;
+   }
+  .weatherSection{
+    margin:0;
   }
+  .stateMenu{width: auto;}
+  .humidityWrap>*{
+    display: block;
+  }
+  .humidityData{overflow: hidden;}
+  .title{float: left;}
+  .value{float: right;}
+  .leftWrap{width: auto;margin:0 0 0 0;padding:20px;}
+  .homeWrap{
+    padding:40px 25px;
+  }
+  h2{margin: 0;}
+  .rightSide{padding-left:25px;}
+  .cardWrap{margin-top: 20px;padding-top:10px;padding-bottom:10px;}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* Page.css */
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.app {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+/*Navbar css*/
+.navbar {
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e;
+  padding: 10px;
+  color: #ecf0f1;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ecf0f1;
+  cursor: pointer;
+}
+
+
+.portal-name {
+  display: flex;
+  align-items: center;
+}
+
+.portal-name img {
+  width: 45px; /* Adjust the width as needed */
+  height: 45px; /* Adjust the height as needed */
+  margin-right: 5px; /* Add margin between the image and text */
+}
+
+.portal-name p {
+  font-size: 20px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  color: #ecf0f1;
+  margin: 0; /* Remove default margin */
+}
+
+
+.menu {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 7.5%;
+  left: -250px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.menu-open {
+  left: 0;
+}
+
+
+/*Footer css*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 8%;
+  flex-shrink: 0;
+  border: 1px solid #7B7A7A;
+  background: #E8E8E8;
+  padding: 10px;
+  border-top: 1px solid #bdc3c7;
+  color: #7f8c8d;
+  position: fixed ;
+  width: 100%;
+  bottom: 0;
+  z-index: 1005;
+}
+
+.footer p1 {
+  color: #000;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.footer p1,
+.footer p3 {
+  color: #000;
+  font-size: 13px;
+  font-family: Raleway;
+}
+
+.footer p3 {
+  margin-left: 1200px;
+  margin-bottom: 5px;
+}
+
+.jal-shakti {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.jal-shakti p2 {
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin: 5px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.jal-shakti img {
+  width: 70px;
+  height: 35px;
+  flex-shrink: 0;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.lang-icon,
+.user-icon
+ {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px; /* Adjusted margin */
+}
+
+.help-icon    {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px; 
+}
+.language-button {
+  display: flex;
+  align-items: center;
+}
+
+.language-button select{
+  text-decoration-color: white;
+  background-color: #34495e;
+  border: none;
+  height: 10px;
+  width: 15px; /* Adjusted width */
+}
+
+.lang-icon {
+  margin-right: 5px; /* Adjusted margin */
 }
